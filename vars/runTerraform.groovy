@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-def call(String action = 'version') {
+def tform(String action = 'version') {
   echo "Lets Run Terraform ${action}."
   terraform ${action}
 }
