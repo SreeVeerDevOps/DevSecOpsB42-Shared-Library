@@ -3,9 +3,6 @@ pipeline {
     agent any
     stages {
         stage('Deploying To DEV Environment') {
-        when {
-            branch 'master'
-        }
             steps {
                 echo 'Deploying To DEV Environment..'
                 sayHello 'MEGASTAR'
