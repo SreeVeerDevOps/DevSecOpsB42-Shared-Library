@@ -1,5 +1,14 @@
 #!/usr/bin/env groovy
-def call(String action = 'version') {
-  echo "Lets Run Terraform ${action}."
-  terraform ${action}
+def call() {
+  pipeline {
+    agent any
+    stages {
+      stage('Terraform Version') {
+        steps {
+          script {
+            echo "Running Terraform Version"
+            sh "terraform version"
+          }
+        }
+    }
 }
