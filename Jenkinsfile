@@ -2,6 +2,9 @@
 pipeline {
     agent any
     stages {
+        when {
+            branch 'master'
+        }
         stage('Deploying To DEV Environment') {
             steps {
                 echo 'Deploying To DEV Environment..'
